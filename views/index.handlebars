@@ -1,0 +1,101 @@
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo right">The Purr-fect Match</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="https://www.github.com/">Contact Us</a></li>
+                <li><a href="https://www.aspca.org/adopt-pet/adoptable-cats-your-local-shelter">ASPCA</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="divider"></div>
+
+<!--- ROW WITH MATCH LINK AND SIGN UP --->
+
+{{!-- Find Match --}}
+<div class="row" id="match_signup">
+    <div class="col s6" id="breed">
+        <h2>Find your Breed!</h2>
+
+        <p>
+            We here at The Purr-fect Match are dedicated to matching loving humans to their furry soul mates!  
+        </p>
+
+        <ul class="button-group float-center">
+            <button class="waves-effect waves-light btn-small">
+                <a  href="/match">Research Breeds!</a>
+            </button>
+            <button class="waves-effect waves-light btn-small"><a href="/marketplace">Marketplace!</a></button>
+        </ul>
+    </div>
+
+    {{!-- Cat Marketplace --}}
+    <div class="col s6">
+        <div class="row">
+            <h4>Post on the cat marketplace</h4>
+            <h6>Search, Adopt, Love!</h6>
+        </div>
+        <div class="row">
+            <form class="col s12" id="user_post" action="/api/new" method="POST">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Placeholder" id="owner_name" type="text" name="ownerName" class="validate">
+                        <label for="owner_name">Owner Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="cat_name" type="text" name="catName" class="validate">
+                        <label for="cat_name">Cat Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="breed" type="text" name="breed" class="validate">
+                        <label for="breed">Breed</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="age" type="text" class="validate" name="age">
+                        <label for="age">Age</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="zip" type="text" name="zipcode" class="validate">
+                        <label for="zip">Zip code</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit">Submit
+                    <i class="material-icons right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<!---ROW WITH TESTIMONIALS --->
+
+<div class="row" id="test_row">
+    <div class="container" id="testimonials">
+        <div class="col s6">
+            <img src="img/catimg.jpg" alt="Avatar" style="width:50px" class="circle responsive-img">
+            <p><span>Mr. Bigglesworth Jr.</span></p>
+            <p>The Purr-fect Match found me the purrfect home!</p>
+        </div>
+        <div class="co s6">
+            <img src="img/catimg2.jpg" alt="Avatar" style="width:50px" class="circle responsive-img">
+            <p><span>Rebecca Flex.</span></p>
+            <p>My soul mate found me on marketplace!</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <h6>Copyright: The Cool Catz</h6>
+</footer>

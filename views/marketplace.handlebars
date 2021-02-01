@@ -1,0 +1,91 @@
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">The Purr-fect Match</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/match">Breeds</a></li>
+        <li><a href="https://www.aspca.org/adopt-pet/adoptable-cats-your-local-shelter">ASPCA</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="divider"></div>
+
+<!-- ROW WITH FILTER-->
+<div class="row">
+  <div class="col s2" id="filter">
+    <h4>Filter</h4>
+    <ul class="button-group float-center">
+      <label>Browser Select</label>
+      
+      <select class="browser-default">
+        <option value="" disabled selected>Breed</option>
+        {{#each cats}}
+        <option value="">{{breed}}</option>
+        {{/each}}
+      </select>
+      
+      <select class="browser-default">
+        <option value="" disabled selected>Age</option>
+        {{#each cats}}
+        <option value="">{{age}}</option>
+        {{/each}}
+      </select>
+      
+      <select class="browser-default">
+        <option value="" disabled selected>Zip Code</option>
+        {{#each cats}}
+        <option value="">{{zipcode}}</option>
+        {{/each}}
+      </select>
+    </ul>
+  </div>
+
+  <div class="col s10">
+    <!-- cat marketplace title and description   -->
+    <div class="row">
+      <h4>Cat marketplace</h4>
+      <p>
+        Find local cats who are looking for their forever home.
+      </p>
+      <div class="divider"></div>
+
+
+      <!-- container with cat cards -->
+      <div class="container">
+        <div class="row">
+          {{#each cats}}
+          <div class="col l4 m4 s12">
+            <div class="card">
+              <div class="card-img">
+                <img src="/img/60532475_400x267.jpg" class="responsive-img">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Cat Name: {{this.catName}}</span>
+                <p>
+                <ul>
+                  <li>Age: {{this.age}}</li>
+                  <li>Breed: {{this.breed}}</li>
+                  <li>Owner name: {{this.ownerName}}</li>
+                  <li>Located at zip code: {{this.zipcode}}</li>
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<footer>
+  <h6>Copyright: The Cool Catz</h6>
+</footer>
